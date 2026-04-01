@@ -60,7 +60,7 @@ promotion_analysis  weather_analysis  demand_analysis
 
 ## Technologies Used
 
-* Python (Pandas, NumPy, Matplotlib, Seaborn)
+* Python (Pandas, NumPy, Matplotlib)
 * SQL
 * Tableau
 * Jupyter Notebook
