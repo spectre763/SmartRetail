@@ -12,6 +12,52 @@ SmartRetail is an end-to-end retail sales analytics project that analyzes sales 
 
 Raw Dataset → Data Cleaning (Python) → SQL Business Analytics → Exploratory Data Analysis → Aggregated Insights → Tableau Dashboard
 
+## Project Architecture
+
+```
+                Raw Data
+                   │
+                   ▼
+            sales_data.csv
+                   │
+                   ▼
+          datacleaning.ipynb
+          (Data Cleaning)
+                   │
+                   ▼
+         clean_retail_data.csv
+                   │
+                   ▼
+              sales_base.sql
+                   │
+                   ▼
+          SQL Analysis Scripts
+     ┌─────────────┬─────────────┬─────────────┐
+     │             │             │             │
+summary_region  summary_store  summary_category
+summary_date    summary_month  season_analysis
+promotion_analysis  weather_analysis  demand_analysis
+     └──────────────────────────────────────────┘
+                   │
+                   ▼
+            final_summary.sql
+                   │
+                   ▼
+           final_summary.csv
+                   │
+                   ▼
+                EDA.ipynb
+        (Exploratory Data Analysis)
+                   │
+                   ▼
+           dashboard_data.csv
+                   │
+                   ▼
+           SmartRetail.twb
+        (Tableau Dashboard)
+```
+
+
 ## Technologies Used
 
 * Python (Pandas, NumPy, Matplotlib, Seaborn)
